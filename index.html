@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+<title>ASK Exchange</title>
+<link rel="icon" href="img/Logo_Svg/Artboard 1.svg" type="image/icon type">
+<meta name="title" content="ASK Exchange">
+<meta name="description" content="Testing for my project...">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ask-it.com/">
+<meta property="og:title" content="ASK Exchange">
+<meta property="og:description" content="Testing for my project...">
+<meta property="og:image" content="img/Artboard1.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://ask-it.com/">
+<meta property="twitter:title" content="ASK Exchange">
+<meta property="twitter:description" content="Testing for my project...">
+<meta property="twitter:image" content="img/Artboard1.png">
+
+    <title>Exchange Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mode.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
+    <link rel="stylesheet" href="vendor/animate_it/animated.min.css">
+</head>
+<body>
+   <section class="app">
+       <div class="output animate__animated animate__slideInDown">
+           <div class="brand-container">
+               <img src="img/Logo_Svg/Artboard 1.svg" alt="" class="logo">
+               <p class="brand">ASKEx</p>
+           </div>
+           <div class="result-container">
+               <p class="result" id="result">00.0</p>
+           </div>
+       </div>
+       <div class="divider"></div>
+       <form class="calc" id="calc">
+           <div class="input-container container">
+               <label>Input</label>
+               <input type="number" class="input" id="input" autofocus required min="1"></input>
+           </div>
+           <div class="from-container container">
+               <label>From</label>
+               <select id="from" class="from" onchange="test()" required>
+                   <option value="" selected>Selected Currency</option>
+               </select>
+           </div>
+           <div class="to-container container">
+               <label>To</label>
+               <select id="to" class="to" required></select>
+           </div>
+           <div class="calculate-container container">
+               <button class="calc-btn" id="calcBtn">Calculate</button>
+           </div>
+       </form>
+       <div class="history-container">
+           <table class="history">
+               <thead>
+                   <tr>
+                       <th>Date</th>
+                       <th>From</th>
+                       <th>To</th>
+                       <th>Result</th>
+                   </tr>
+               </thead>
+               <tbody id="historyList">
+                  
+               </tbody>
+           </table>
+       </div>
+   </section>
+
+   <button class="mode-change animate__animated animate__slideInUp" onclick="changeMode()">
+       <i class="fas fa-moon" style="color: var(--light);" id="modeIcon"></i>
+   </button>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
